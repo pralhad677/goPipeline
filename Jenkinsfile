@@ -3,10 +3,12 @@ pipeline {
   stages {
     stage('build') {
       steps {
-         
-      echo ${name} 
+        script{
+ 
+      echo "${name}" 
         sudo chmod +x a.go
-        go run a.go
+        go run a.go 
+        }
       }
     }
 
