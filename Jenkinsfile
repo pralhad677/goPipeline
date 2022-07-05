@@ -8,9 +8,14 @@ pipeline {
       steps {
         script{
  
-      echo "${name}" 
-        sudo chmod +x a.go
+    
+             sh '''#!/bin/bash
+                 echo "hello world" 
+                   echo "${name}" 
+                 sudo chmod +x a.go
         go run a.go 
+         '''
+        
         }
       }
     }
