@@ -24,4 +24,8 @@ pipeline {
   environment {
     name = 'jacob'
   }
+  post {
+        always {
+            echo "This block always runs."
+        }
 }
