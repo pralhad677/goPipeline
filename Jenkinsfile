@@ -7,11 +7,13 @@ pipeline {
   stages {
     stage('input'){
       agent none
+      steps{
       name = input(
         message:"your name please!!",
         ok:"submit",
         parameter:[string(defaultValue:"jacob",name:"Name",trim:true)]
       )
+      }
     }
     stage('build') {
       steps {
